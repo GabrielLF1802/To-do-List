@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Task list</title>
+    <link rel="shortcut icon" href="../completo.png" type="image/x-icon">
+    <title>To-do List</title>
 </head>
 <body>
+    <video muted autoplay loop id="video">
+        <source src="../1722881-Uhd 3840 2160 25Fps.mp4" type="video/mp4">
+    </video>
     <main>
+        <h1>To-do list</h1>
         <section id="sec1">
             <div id="add">
                 <input type="text" id="text">
                 <button onclick="adicionar()">Add</button>
-                <button onclick="limpar()">Clear</button>
             </div>
 
         </section>
@@ -20,7 +24,7 @@
         <section id="list">
             <!-- Lugar que irá receber as tarefas adicionadas -->
         </section>
-
+        <div id="botaolimpar"><button onclick="limpar()" id="limpar">Clear</button></div>
 
 
 
