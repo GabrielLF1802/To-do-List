@@ -17,18 +17,16 @@ window.onload = function(){
         })
             
     }) */
+   
     let historico= JSON.parse(localStorage.getItem('minhastarefas')) || []
     Savetarefas= historico
-    let numTaref= historico.length
-    for (let i=0; i<=numTaref-1; i++){
+    console.log(Savetarefas)
+    Savetarefas.forEach(texto => {
         let res = document.getElementById('list')
         let tarefa= document.createElement('ul')
-        let texto= historico[i]
         tarefa.innerHTML=`<p>${texto}</p> <input type="checkbox" name="checkbox" class="tarefa"> <br> <button id="${texto}" onclick="deletar(this)" class="delete">🗑️</button>`
         res.appendChild(tarefa)
-
-// pode-se fazer um foreach 
-    }
+    });
 }
 
 
@@ -85,8 +83,7 @@ function deletar(task){
     const index = Savetarefas.findIndex((conteudo)=> conteudo===task.id)
     if (index!==-1){
         Savetarefas.splice(index, 1)
-    }
-    console.log(Savetarefas)
+    } 
 }
 function limpar(){
     localStorage.clear()
